@@ -59,6 +59,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reserved.cs" />
+    <Compile Include="tblAccount.cs" />
+    <Compile Include="tblBankAccountType.cs" />
+    <Compile Include="tblBankDetails.cs" />
+    <Compile Include="tblComment.cs" />
+    <Compile Include="tblList.cs" />
+    <Compile Include="tblLookUpBank.cs" />
+    <Compile Include="tblMoney.cs" />
+    <Compile Include="tblRegistration.cs" />
+    <Compile Include="tblReserves.cs" />
+    <Compile Include="tblUser.cs" />
+    <Compile Include="tblUserRole.cs" />
+    <Compile Include="UserAccount.cs" />
     <Compile Include="UserProfile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
