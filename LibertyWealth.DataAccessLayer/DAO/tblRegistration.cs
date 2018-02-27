@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibertyWealth.DataAccessLayer.DAO
+namespace LibertyWealth.DataAccess.DAO
 {
   public  class tblRegistration
     {

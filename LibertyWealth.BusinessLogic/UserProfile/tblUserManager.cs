@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibertyWealth.Entities;
-using LibertyWealth.DataAccessLayer.Interfaces;
+using LibertyWealth.DataAccess.Interfaces;
 namespace LibertyWealth.BusinessLogic.UserProfile
 {
    public class tblUserManager

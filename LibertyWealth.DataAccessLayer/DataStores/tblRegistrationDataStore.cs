@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LibertyWealth.DataAccessLayer.DAO;
-using LibertyWealth.DataAccessLayer.Interfaces;
-namespace LibertyWealth.DataAccessLayer.DataStores
+using LibertyWealth.DataAccess.DAO;
+using LibertyWealth.DataAccess.Interfaces;
+namespace LibertyWealth.DataAccess.DataStores
 {
    public class tblRegistrationDataStore:ItblRegistrationDataStore
     {

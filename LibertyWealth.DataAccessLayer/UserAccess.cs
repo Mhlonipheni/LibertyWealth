@@ -8,7 +8,7 @@ using Dapper;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace LibertyWealth.DataAccessLayer
+namespace LibertyWealth.DataAccess
 {
    public class UserAccess
     {
@@ -81,4 +81,4 @@ namespace LibertyWealth.DataAccessLayer
 
     }
 }
-}
+

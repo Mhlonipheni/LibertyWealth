@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LibertyWealth.BusinessLogic.UserProfile;
+using LibertyWealth.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,16 +21,17 @@ namespace LibertyWealth.Api.Controllers
         }
 
         // GET: api/UserProfile/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{id}", Name = "GetUserProfile")]
+        public UserProfile GetUserProfile(int id)
         {
-            return "value";
+            return UserProfileManager.Instance.GetUserProfileById(id);
         }
         
         // POST: api/UserProfile
         [HttpPost]
-        public void Post([FromBody]string value)
+        public UserProfile Post([FromBody]UserProfile value)
         {
+            return UserProfileManager.Instance.AddUserProfile(value);
         }
         
         // PUT: api/UserProfile/5

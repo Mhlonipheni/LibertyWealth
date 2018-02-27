@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LibertyWealth.DataAccessLayer.DAO;
+using LibertyWealth.DataAccess.DAO;
 
-namespace LibertyWealth.DataAccessLayer.Interfaces
+namespace LibertyWealth.DataAccess.Interfaces
 {
     public interface ItblAccountDataStore
     {

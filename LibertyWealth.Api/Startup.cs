@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LibertyWealth.BusinessLogic.UserProfile;
+using LibertyWealth.DataAccess.DataStores;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +26,8 @@ namespace LibertyWealth.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            UserProfileManager.RegisterManager(new UserProfileManager(), new UserProfileDataStore(""));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

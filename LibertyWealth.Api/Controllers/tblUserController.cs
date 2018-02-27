@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using LibertyWealth.Entities;
-using LibertyWealth.DataAccessLayer.Interfaces;
+using LibertyWealth.DataAccess.Interfaces;
 
 namespace LibertyWealth.Api.Controllers
 {

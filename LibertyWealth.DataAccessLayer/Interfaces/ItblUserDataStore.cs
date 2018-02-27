@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LibertyWealth.Entities;
 
-namespace LibertyWealth.DataAccessLayer.Interfaces
+namespace LibertyWealth.DataAccess.Interfaces
 {
     public interface ItblUserDataStore
     {

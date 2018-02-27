@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibertyWealth.DataAccessLayer
+namespace LibertyWealth.DataAccess
 {
     public static class SqlStatement
     {

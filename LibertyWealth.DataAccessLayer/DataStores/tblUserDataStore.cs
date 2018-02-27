@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LibertyWealth.DataAccessLayer.DAO;
-using LibertyWealth.DataAccessLayer.Interfaces;
+using LibertyWealth.DataAccess.DAO;
+using LibertyWealth.DataAccess.Interfaces;
 using LibertyWealth.Entities;
 
-namespace LibertyWealth.DataAccessLayer.DataStores
+namespace LibertyWealth.DataAccess.DataStores
 {
    public class tblUserDataStore:ItblUserDataStore
     {

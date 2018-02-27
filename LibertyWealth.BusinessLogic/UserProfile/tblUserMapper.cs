@@ -8,7 +8,7 @@ namespace LibertyWealth.BusinessLogic.UserProfile
 {
    public static class tblUserMapper
     {
-        public static LibertyWealth.Entities.tblUser User(this Entities.tblUser Userinput)
+        public static Entities.tblUser User(this Entities.tblUser Userinput)
         {
             return new Entities.tblUser()
             {
@@ -26,9 +26,9 @@ namespace LibertyWealth.BusinessLogic.UserProfile
             };
         } 
 
-       public static LibertyWealth.DataAccessLayer.DAO.tblUser MapToDAO(this Entities.tblUser objUSer)
+       public static DataAccess.DAO.tblUser MapToDAO(this Entities.tblUser objUSer)
         {
-            var Userinput = new DataAccessLayer.DAO.tblUser
+            var Userinput = new DataAccess.DAO.tblUser
             {
                 UserId = objUSer.UserId,
                 FirstName = objUSer.FirstName,
