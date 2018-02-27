@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibertyWealth.DataAccessLayer.DAO
+namespace LibertyWealth.DataAccessLayer.DAO { 
    public class tblMoney
     {
         public int MoneyId { get; set; }

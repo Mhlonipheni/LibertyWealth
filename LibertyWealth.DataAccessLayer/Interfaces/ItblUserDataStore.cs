@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LibertyWealth.DataAccessLayer.DAO;
+using LibertyWealth.Entities;
+
 namespace LibertyWealth.DataAccessLayer.Interfaces
 {
     public interface ItblUserDataStore
     {
-        tblUser AddUser(tblUser user);
-        tblUser UpdateUser(tblUser user);
-        tblUser GetUserById(long userId);
+        bool AddUser(tblUser user);
+        bool UpdateUser(tblUser user);
+        bool GetUserById(long userId);
         IList<tblUser> GetAllUser();
-        void DeleteUser(long userId);
+        bool DeleteUser(long userId);
+   
     }
 }

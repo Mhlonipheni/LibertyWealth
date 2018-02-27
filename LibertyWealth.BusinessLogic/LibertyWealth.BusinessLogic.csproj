@@ -48,6 +48,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -60,7 +63,22 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserProfile\Mapper.cs" />
+    <Compile Include="UserProfile\tblUserManager.cs" />
+    <Compile Include="UserProfile\tblUserMapper.cs" />
     <Compile Include="UserProfile\UserProfileManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibertyWealth.DataAccessLayer\LibertyWealth.DataAccessLayer.csproj">
+      <Project>{6fa9bb8e-be15-4cf9-a25c-2ed6468e7049}</Project>
+      <Name>LibertyWealth.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibertyWealth.Entities\LibertyWealth.Entities.csproj">
+      <Project>{e1b1d1dd-dad7-4f5b-bdc3-134412f974c0}</Project>
+      <Name>LibertyWealth.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

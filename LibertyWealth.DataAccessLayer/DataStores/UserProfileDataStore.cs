@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dapper;
+
 namespace LibertyWealth.DataAccessLayer.DataStores
 {
     public class UserProfileDataStore : IUserProfileDataStore

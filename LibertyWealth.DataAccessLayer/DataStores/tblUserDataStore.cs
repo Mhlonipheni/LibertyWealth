@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using LibertyWealth.DataAccessLayer.DAO;
 using LibertyWealth.DataAccessLayer.Interfaces;
+using LibertyWealth.Entities;
+
 namespace LibertyWealth.DataAccessLayer.DataStores
 {
    public class tblUserDataStore:ItblUserDataStore
@@ -15,29 +17,29 @@ namespace LibertyWealth.DataAccessLayer.DataStores
             Connection = connection;
         }
 
-        public tblUser AddUser(tblUser user)
+        public bool AddUser(Entities.tblUser user)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteUser(long userId)
+        public bool DeleteUser(long userId)
         {
             throw new NotImplementedException();
         }
 
-        public IList<tblUser> GetAllUser()
+        public IList<Entities.tblUser> GetAllUser()
         {
             throw new NotImplementedException();
         }
 
-        public tblUser GetUserById(long userId)
+        public bool GetUserById(long userId)
         {
             throw new NotImplementedException();
         }
 
-        public tblUser UpdateUser(tblUser user)
+        public bool UpdateUser(Entities.tblUser user)
         {
             throw new NotImplementedException();
         }
-    }
+    }   
 }
