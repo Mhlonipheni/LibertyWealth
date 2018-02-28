@@ -4,36 +4,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibertyWealth.Entities;
+using LibertyWealth.DataAccess.DAO;
 using LibertyWealth.DataAccess.Interfaces;
 namespace LibertyWealth.BusinessLogic.UserProfile
 {
-   public class tblUserManager
+    public class tblUserManager
     {
-        ItblUserDataStore _userStore;
+        private static ItblUserDataStore _userStore;
+        private static tblUserManager _instance;
 
-        public tblUserManager(ItblUserDataStore userStore)
+        public static void RegisterManager(tblUserManager userManager, ItblUserDataStore userDataStore)
         {
-            _userStore = userStore;
+            _instance = userManager;
+            _userStore = userDataStore;
+
         }
 
-        public bool AddUser(tblUser user)
+        public static tblUserManager Instance => _instance;
+        public Entities.tblUser AddUser(Entities.tblUser User)
         {
-            return _userStore.AddUser(user);
+            var daoUSer = User.MapToDAO();
+            var objUser = _userStore.AddUser(daoUSer);
+
+            return objUser.MapToEntity();
         }
 
-        public bool UpdateUser(tblUser user)
+        public Entities.tblUser UpdateUser(Entities.tblUser User)
         {
-            return _userStore.UpdateUser(user);
+            var daoUSer = User.MapToDAO();
+            var objUser = _userStore.UpdateUser(daoUSer);
+
+            return objUser.MapToEntity();
         }
 
-        public bool DeleteUser(int userid)
+        public Entities.tblUser GetUserById(long userId)
         {
-            return _userStore.DeleteUser(userid);
+            var User = _userStore.GetUserById(userId);
+
+            return User?.MapToEntity();
         }
 
-        public IList<tblUser> GetAllUser()
-        {
-            return _userStore.GetAllUser();
-        }
+        
     }
-}
+    }

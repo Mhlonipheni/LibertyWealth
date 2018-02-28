@@ -22,6 +22,11 @@ namespace LibertyWealth.DataAccess.DataStores
             throw new NotImplementedException();
         }
 
+        public DAO.tblUser AddUser(DAO.tblUser user)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool DeleteUser(long userId)
         {
             throw new NotImplementedException();
@@ -38,6 +43,26 @@ namespace LibertyWealth.DataAccess.DataStores
         }
 
         public bool UpdateUser(Entities.tblUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DAO.tblUser UpdateUser(DAO.tblUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        void ItblUserDataStore.DeleteUser(long userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        IList<DAO.tblUser> ItblUserDataStore.GetAllUser()
+        {
+            throw new NotImplementedException();
+        }
+
+        DAO.tblUser ItblUserDataStore.GetUserById(long userId)
         {
             throw new NotImplementedException();
         }

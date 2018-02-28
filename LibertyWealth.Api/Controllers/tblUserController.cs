@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using LibertyWealth.Entities;
-using LibertyWealth.DataAccess.Interfaces;
+using LibertyWealth.BusinessLogic.UserProfile;
 
 namespace LibertyWealth.Api.Controllers
 {
@@ -13,45 +13,39 @@ namespace LibertyWealth.Api.Controllers
     [Route("api/tblUser")]
     public class tblUserController : Controller
     {
-        ItblUserDataStore _userStore;
-        public tblUserController(ItblUserDataStore userStore)
-        {
-            _userStore = userStore;
-        }
-
         // GET: api/tblUser
         [HttpGet]
-        public IEnumerable<tblUser> Get()
+        public IEnumerable<string> Get()
         {
-            return _userStore.GetAllUser();
+            return new string[] { "value1", "value2" };
         }
 
         // GET: api/tblUser/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{id}", Name = "GetUserProfile")]
+        public tblUser GetUserProfile(int id)
         {
-            return "value";
+            return tblUserManager.Instance.GetUserById(id);
         }
         
         // POST: api/tblUser
         [HttpPost]
-        public void Post([FromBody]tblUser user)
+        public tblUser Post([FromBody]tblUser user)
         {
-          _userStore.AddUser(user);
+            return tblUserManager.Instance.AddUser(user);
         }
         
         // PUT: api/tblUser/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]tblUser user)
+        public tblUser Put(int id, [FromBody]tblUser user)
         {
-            _userStore.UpdateUser(user);
+            return tblUserManager.Instance.UpdateUser(user);
         }
         
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-            _userStore.DeleteUser(id);
-        }
+        //[HttpDelete("{id}")]
+        //public void Delete(int id)
+        //{
+        //    _userStore.DeleteUser(id);
+        //}
     }
 }

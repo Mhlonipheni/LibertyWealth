@@ -8,41 +8,42 @@ namespace LibertyWealth.BusinessLogic.UserProfile
 {
    public static class tblUserMapper
     {
-        public static Entities.tblUser User(this Entities.tblUser Userinput)
+        public static Entities.tblUser MapToEntity(this DataAccess.DAO.tblUser daouser)
         {
-            return new Entities.tblUser()
+            var mapToEntity = new Entities.tblUser
             {
-                UserId = Userinput.UserId,
-                FirstName = Userinput.FirstName,
-                Surname = Userinput.Surname,
-                CellphoneNumber = Userinput.CellphoneNumber,
-                UserRoleId = Userinput.UserRoleId,
-                DateCreated = Userinput.DateCreated,
-                Email = Userinput.Email,
-                EmailConfirmed = Userinput.EmailConfirmed,
-                TwoFactorCount = Userinput.TwoFactorCount,
-                LockedOut = Userinput.LockedOut,
-                Password = Userinput.Password,
+                UserId = daouser.UserId,
+                FirstName = daouser.FirstName,
+                Surname = daouser.Surname,
+                CellphoneNumber = daouser.CellphoneNumber,
+                UserRoleId = daouser.UserRoleId,
+                DateCreated = daouser.DateCreated,
+                Email = daouser.Email,
+                EmailConfirmed = daouser.EmailConfirmed,
+                TwoFactorCount = daouser.TwoFactorCount,
+                LockedOut = daouser.LockedOut,
+                Password = daouser.Password,
             };
+            return mapToEntity;
         } 
 
-       public static DataAccess.DAO.tblUser MapToDAO(this Entities.tblUser objUSer)
+       public static DataAccess.DAO.tblUser MapToDAO(this Entities.tblUser objUser)
         {
-            var Userinput = new DataAccess.DAO.tblUser
+            var User = new DataAccess.DAO.tblUser
             {
-                UserId = objUSer.UserId,
-                FirstName = objUSer.FirstName,
-                Surname = objUSer.Surname,
-                CellphoneNumber = objUSer.CellphoneNumber,
-                UserRoleId = objUSer.UserRoleId,
-                DateCreated = objUSer.DateCreated,
-                Email = objUSer.Email,
-                EmailConfirmed = objUSer.EmailConfirmed,
-                TwoFactorCount = objUSer.TwoFactorCount,
-                LockedOut = objUSer.LockedOut,
-                Password = objUSer.Password,
+                UserId = objUser.UserId,
+                FirstName = objUser.FirstName,
+                Surname = objUser.Surname,
+                CellphoneNumber = objUser.CellphoneNumber,
+                UserRoleId = objUser.UserRoleId,
+                DateCreated = objUser.DateCreated,
+                Email = objUser.Email,
+                EmailConfirmed = objUser.EmailConfirmed,
+                TwoFactorCount = objUser.TwoFactorCount,
+                LockedOut = objUser.LockedOut,
+                Password = objUser.Password,
             };
-            return Userinput;
+            return User;
         }
     }
 }
