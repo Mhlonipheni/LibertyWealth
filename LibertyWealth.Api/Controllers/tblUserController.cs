@@ -21,8 +21,8 @@ namespace LibertyWealth.Api.Controllers
         }
 
         // GET: api/tblUser/5
-        [HttpGet("{id}", Name = "GetUserProfile")]
-        public tblUser GetUserProfile(int id)
+        [HttpGet("{id}", Name = "GetUserById")]
+        public tblUser GetUserById(int id)
         {
             return tblUserManager.Instance.GetUserById(id);
         }
